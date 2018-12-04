@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>web-learning experience of css</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/css.css" />
+    <script src=""></script>
+</head>
+<body>
+    <ul class="nevigation" style="background-color: none">
+        <li><a href="./index.html#content-web">Web</a></li>
+        <li><a href="./index.html#content-ai">AI</a></li>
+        <li><a href="./index.html#content-about">About</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <div class="menu">
+            <a class="dropbtn" href="./index.html">
+                <img src="./pics/neural-network.png" height=45px width=45px style="vertical-align: middle">
+                <span id="name">S G W - I T E</span>
+            </a>
+            <div class="dropdown-content">
+                <a href="./ai-nn.html">AI</a>
+                <a href="./web.html">Web</a>
+                <a href="./index.html#content-about">About</a>
+                <a href="./index.html">Home</a>
+            </div>            
+        </div>
+    </ul>
+    <img src="./pics/dark.jpg" alt="bg" id='bgimg'>
+    <br><br><br><br><br>
+    <p>
+        &nbsp; &nbsp; <b>WEB</b> : html&css&js学习经历^_^
+    </p> 
+    <br>
+    <hr>
+    <div class='content'>
+        <br>
+        <h3>写在前面</h3>
+        <p>  >w<  这次的大计基真是出人意料。。</p>
+        <p>原本打算8节课就搞定，然而= =</p>
+        <p>写了整整三十小时QAQ</p>
+        <p>因为DW实在用不惯（包括一些框架像H5或者Silex什么的），再加上web组学长说html&css&js入门很快！于是便天真的走入不归路= =</p>
+        <p>学习的过程中遇到了一堆的坑，有的时候一点小东西自己去google可能就要花半个多小时才能弄好。。</p>
+        <p>好在最后的效果还差强人意^_^</p>
+        <p>自己入门也不久，下面的内容全当是自己对自己这几天来起码三十小时的学习的总结吧</p>
+        <hr>
+        <h1 id='html'>HTML</h1>
+        <h3>总述</h3>
+        <p>html作为网页的主体部分，也是我最先开始看的。</p>
+        <p>虽然由于之前写了一点博客的原因接触过markdown，但是一开始看html我还是看的有点慢</p>
+        <p>不得不说菜鸟教程这样的网站真的对初学者特别友好——知识相对全面，成体系，有实例，可以支持很方便的试验</p>
+        <p>但也正是因为这个我在第一遍看html看的太细，几乎每一项提到的功能自己都要实现一遍</p>
+        <p>然而事实证明这样效率其实很低= =</p>
+        <p>一是虽然实现过，但是也只能停留在简单的完成网页上的示例，并不可能一次就记得清清楚楚；</p>
+        <p>二是事实上在制作网页的过程中有许多方面的内容几乎就用不到（可能出于有更好的替代品，或者压根网页就很少需要这个功能）。</p>
+        <p>所以我现在觉得第一遍学习html大可以整体快速浏览一遍，旨在记住在哪里有些什么样的操作，没有必要记住怎样用代码实现，因为在制作网页的过程，你一定还是要回来再看一遍的= =</p>
+        <hr>
+        <h3>html标准格式以及外部css和js的导入</h3>
+        <p>html框架不赘述了（vscode万岁），需要注意的是每一个标签都要关闭，img要加入alt描述</p>
+        <p>外部css的导入的格式一般为： <span class='code'>&ltlink rel="stylesheet" type="text/css" media="screen" href="./css/css.css" /&gt;</span></p>
+        <p>js的导入：<span class='code'>&ltscript src="./js/hahaha.js"&gt&lt/script&gt</span></p>
+        <hr>
+        <h3>布局常用元素和方法</h3>
+        <p>我自己在使用中布局主要还是使用div配合css布局，偶尔使用列表（主要是做导航栏）和span（拿来做类似markdown中的code框）</p>
+        <p>常用方法主要是相对路径+锚点的链接写法，‘&lt’和‘&gt’和‘&nbsp’</p>
+        <hr>
+        <h1 id='css'>CSS</h1>
+        <h3>总述（其实是唠叨hhh）</h3>
+        <p>cssnb！事实上在学css我甚至觉得html简直辣鸡= =（写出来的东西是真的丑）然而在学了css之后发现打开新世界~~</p>
+        <p>闲话不多说了，我在学css的时候也是太过较真，后来发现大块东西用不着，用的着也容易忘= =所以说最好的办法还是第一遍只是建立一个图像，了解css能干什么就好了</p>
+        <p>事实上大部分的记忆都是发生在主动去用css去写东西的时候的，所以第一遍真的不要太纠结~</p>
+        <p>css的用法特别多，光纯粹的css都已经足够做出很coooool的界面了，这里只是分享一下自己使用中的遇到的坑和一些好用的方法</p>
+        <hr>
+        <h3>导入外界字体</h3>
+        <p>
+            <span class='code'>@font-face{
+                font-family: futurabook;
+                src: url("../font/Futurabook.ttf");
+                }
+            </span>
+        </p>
+        <hr>
+        <h3>导航栏：hover伪类的运用</h3>
+        <p>我是使用列表来实现导航栏的。基本方法是：列表里面放链接，替换成块状元素，当鼠标指到链接时（hover）出发一系列举动，比如变色等。</p>
+        <p>下拉导航栏则是运用display：none和display：block的转换（也可以用visible：0和1来代替但是前者触发前是不占位的）</p>
+        <hr>
+        <h3>CSS渐变</h3>
+        <p>（css渐变是我掌握的第一个是网页生动起来的效果^_^真心赞）</p>
+        <p>使用css渐变需要用类似<span class='code'>transition:all 0.5s;</span>的结构声明将会应用渐变的属性，然后指定时间（其实这和动画很相似）。</p>
+        <p>我个人常用于改变字体颜色和完成下拉菜单或着隐藏内容的渐入渐出</p>
+        <hr>
+        <h3>使目标在div中居中</h3>
+        <p>1. <span class='code'>margin: 0 auto;</span></p>
+        <p>这种方式常用于把div中指定元素居中（需要保证它占有一整行也就是下面的内容没有什么float之类的）</p>
+        <p>2. <span class='code'>text-align: center;</span></p>
+        <p>这种可以是div中所有元素水平居中</p>
+        <p>3. <span class='code'>display: table-cell; vertical-align: middle;</span></p>
+        <p>这种方法使元素垂直居中（常用于图片元素），但是要改变div种类</p>
+        <p>这个vertical-align属性应用的使用是相对与整行的，所以必须是用于行内元素，且如果不改成tablecell居中是没有反应的。。。（当然也可以手动将行高设置成div高，但若指定px那么不同比例下不同，这如果还要用js可太麻烦了= =）</p>
+        <p>4. <span>display: box; box-align: center; box-pack: center;</span>(注意：这里的box最好分开各种浏览器分别写)</p>
+        <p>这个用起来比较爽hhh就是IE完全不支持= =</p>
+        <hr>
+        <h3>CSS动画</h3>
+        <p>我个人在这次的网页中很少用到动画，因为其实渐变就可以拿来做很多事。</p>
+        <p>在我的理解里，渐变很像一个定好起始和终点的动画，动画相较于渐变是拥有了更好的表达能力</p>
+        <p>keyframe格式和触发方法不赘述了，总之做的时候还是要记住注意各个浏览器的兼容问题</p>
+        <hr>
+        <h1 id='javascript'>Javascrpit</h1>
+        <h3>总述（唠叨）</h3>
+        <p>Javascrpit我只能算是刚入门的新手，不过就这几天的学习经历，还是可以来谈谈体会</p>
+        <p>js给我的感觉像是一个描述能力很强的一种css的感觉</p>
+        <p>对各个元素的位置，时间，用户操作都能捕捉</p>
+        <p>学长也说过“没有js的网页是没有灵魂的”</p>
+        <p>在我看来确实如此。</p>
+        <p>js提供了网页与用户进行交互的方法，提供了更好的控制网页行为的方法，有了这些，网页的使用体验就能更自然，更流畅，同时看着也更丰富</p>
+        <p>总之，的确是个相当强大的工具a</p>
+        <p>下面我就不赘述一些基本的语法和格式了，主要介绍一点我觉得很实用的东西</p>
+        <hr>
+        <h3>监听用户浏览位置</h3>
+        <p>很多时候我们需要根据用户正在浏览的内容改变屏幕上某元素的状态（尤其是导航栏），这个时候就可以使用<span  class='code'>window.onsroll</span>变量</p>
+        <p>具体代码的思路是将一个操作编写为函数，赋值给<span  class='code'>window.onscroll</span>变量，由它来监听用户的滚动行为</p>
+        <p>这里又涉及到如何获取用户正在浏览的位置的问题，一般是通过body或者documentelement的scrolltop来获取（直接取个交集就完事了）</p>
+        <p>具体代码如下：</p>
+        <p>
+            <span  class='code' style='text-align: left;'>
+                window.onscroll = function(e){ <br>
+                    &nbsp&nbsp&nbsp&nbspvar target1 = document.getElementById('xxx'); <br>
+                    &nbsp&nbsp&nbsp&nbspvar e =e || window.event; <br>
+                    &nbsp&nbsp&nbsp&nbspvar scrolltop=document.documentElement.scrollTop||document.body.scrollTop; <br>
+                    &nbsp&nbsp&nbsp&nbspvar windowheight = document.documentElement.clientHeight; <br>
+                    &nbsp&nbsp&nbsp&nbspif (scrolltop>windowheight) { <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    pass; <br>
+                        &nbsp&nbsp&nbsp&nbsp } <br>
+                        &nbsp&nbsp&nbsp&nbspif(scrolltop<=windowheight){ <br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    pass; <br>
+                            &nbsp&nbsp&nbsp&nbsp} <br>
+                }
+            </span>
+        </p>
+        <hr>
+        <h3>获取元素的绝对位置</h3>
+        <p>很多时候这个要配合上面的函数使用</p>
+        <p>有的时候你希望屏幕滚到一个元素出现（或者是他消失）就进行一个什么动作，那么显然你需要获得他的位置。</p>
+        <p>如果像我一开始那样傻fufu的用px去试出元素的位置，不但很麻烦而且一旦你在别人的电脑上打开，你就会惊奇的发现：简直一团乱遭</p>
+        <p>所以就需要借助js来帮助我们计算元素的绝对位置</p>
+        <p>思路是用offsettop函数。</p>
+        <p>它的作用是输出元素到它的父级元素的顶端的位置，那么我们只需要逐级递归，直至父元素为document或者null为止，即可得到绝对位置</p>
+        <p>以下是具体代码：</p>
+        <p>
+            <span  class='code' style='text-align: left;'>
+                function getabsolute(target) { <br>
+                    &nbsp&nbsp&nbsp&nbspvar mytop = 0; <br>
+                    &nbsp&nbsp&nbsp&nbspvar e = target; <br>
+                    &nbsp&nbsp&nbsp&nbspwhile(e != null){ <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    mytop += e.offsetTop; <br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    e = e.offsetParent <br>
+                        &nbsp&nbsp&nbsp&nbsp} <br>
+                        &nbsp&nbsp&nbsp&nbspreturn mytop; <br>
+                }
+            </span>
+        </p>
+        <hr>
+        <p>好啦！就先写到这里啦^_^</p>
+        <p>虽然这次因为一个小作业花了这么多时间，但我觉得还是挺值得的吧~</p>
+        <p>也勉强算是入门了一下前端，体会到了前端人员的痛苦2333</p>
+        <p>可能等自己闲下来了，还会研究研究网页开发</p>
+        <p>就算将来不一定做这一行，也可以写个网页供自己欣赏^_^</p>
+        <br><br><br>
+    </div>
+
+    <hr>
+
+    <div class='content-foot'>
+        <a href='#' id='sitemap'>Site Map</a>
+        <a href='./index.html' id='tohome'>Home</a>
+        <a href='./index.html#content-about' id='toabout'>About</a>
+        <a href='./index.html#content-ai' id='toai'>AI</a>
+        <a href='./index.html#content-web' id='toweb'>WEB</a>
+        <a href='../index.html' id='tohomeof515'>Homepage of Dorm515</a>
+        <a href='#' id='contact'>Contact</a>
+        <div class='towechatinfo'>
+            <a href='#?'><img src="./pics/wechat.png" alt="wechat" id='wechat'></a>
+            <div id='wechatinfo'>wxid:sgw_ite</div>
+        </div>
+        <div class='togithubinfo'>
+            <a href="#?"><img src="./pics/social-github.png" alt="github" id='github'></a>
+            <div id='githubinfo'>githubid:sgw-ite</div>
+        </div>        
+    </div>
+
+</body>
+</html>

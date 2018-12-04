@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ai-thoughts of neural network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/ai.css" />
+    <script src=""></script>
+</head>
+<body>
+    <ul class="nevigation" style="background-color: none">
+        <li><a href="#content-web" id='web1'>Web</a></li>
+        <li><a href="#content-ai" id='ai1'>AI</a></li>
+        <li><a href="#content-about" id='about1'>About</a></li>
+        <li><a href="#content-home" id='home1'>Home</a></li>
+        <div class="menu">
+            <a class="dropbtn" href="./index.html">
+                <img src="./pics/neural-network.png" height=45px width=45px style="vertical-align: middle">
+                <span id="name">S G W - I T E</span>
+            </a>
+            <div class="dropdown-content">
+                <a href="./ai-nn.html">AI</a>
+                <a href="./web.html#css">Web</a>
+                <a href="#content-about">About</a>
+                <a href="#content-home">Home</a>
+            </div>            
+        </div>
+    </ul>
+    <img src="./pics/dark.jpg" alt="bg" id='bgimg'>
+    <br><br><br><br><br>
+    <p>
+        &nbsp; &nbsp; <b>AI</b> : 关于神经网络的一些思考
+    </p> 
+    <br>
+    <hr>
+    <!--<img src="./pics/nn.png" alt="nn" style="height: 300px; width:250px;position: relative;top:100px;left:750px;">-->
+    <div class='content'>
+        <br>
+        <h3>写在前面</h3>
+        <p>最近在学习神经网络的过程中，遇到了许多困难。</p>
+        <p>最麻烦的一次，找了4天都没找出来bug。</p>
+        <p>于是我一气之下决定重新写一份。</p>
+        <p>但是思路总归还是要跟以前的不一样写了才有意义嘛。</p>
+        <p>所以我就从头开始复习基础神经网络。</p>
+        <p>在复习的过程中看到了许多有意思的东西。</p>
+        <p>特地来分享一下。</p>
+        <hr>
+        <h3>感知机和逻辑回归</h3>
+        <div id='ganzhijib'><img src="./pics/ganzhiji.jpg" alt="ganzhiji" id='ganzhiji'><p style='align-self: auto;text-align: center;'>感知机</p></div>
+        <p>一般来说，讲神经网络的教材都会以一个感知机为开始(如上图)。</p>
+        <p>感知机接收一些数据(X),然后以线性组合(W.dot(X))的方式将他们组合起来得到一个输入的总量。</p>
+        <p>再对这个输入总量进行处理(这里的方法是使用一个sign函数)，得到输出值,再由输出值进行预测</p>
+        <p>仔细想想，这和逻辑回归的预测原理其实很像</p>
+        <p>逻辑回归同样是线性组合的方式得到一个所谓输入总量，再使其通过一个sigmoid函数得到输出值，依此分类</p>
+        <p>这和一开始我们认识的逻辑回归就很不一样</p>
+        <p>在通常的教程中，逻辑回归被认为是一个寻找分类边界的算法，y=wx+b的意义是那个分类超平面</p>
+        <p>然而，如果我们把y=wx+b看成是一个计算“分值”的函数</p>
+        <p>预测干的事情其实是处理这个分数</p>
+        <p>那么好像很多问题就很好理解了</p>
+        <hr>
+        <h3>从评分到svm到损失函数</h3>
+        <p>假设了评分这一概念后，我们来看看看似与神经网络毫不相干的svm</p>
+        <p>svm通常是寻找一个超平面使得它里两边的支撑向量的距离尽可能的远</p>
+        <p>而如果我们将这个超平面理解成计算分值的函数</p>
+        <p>svm的分类模式其实也可以用神经网络的模式来概括————算分，把分转化为结果</p>
+        <p>我们拿这些分类器做的其实也就是计算分值，得到结果，再去通过修改权重修改得分</p>
+        <p>而这几个分类器之间的区别，也就仅仅是分值计算手段（神经网络有复杂的结构而其余两者没有），损失函数定义的不同而已</p>
+        <hr>
+        <h3>神经网络的线性非线性理解</h3>
+        <p>回到神经网络这块来。如果我们把分类过程看作是计算的一个分数，那么许多网络的行为就变得很好理解</p>
+        <p>比如神经网络为什么需要激活层？为什么说离开了激活层再深的网络都没有任何意义？</p>
+        <p>其实就可以理解成一个分值计算的原因</p>
+        <p>倘若没用激活层，由于神经网络的各个层各个节点之间以线性计算的方式连接，最后得到的分数也一定只是数据和权重的线性组合罢了</p>
+        <p>而加入了激活层之后，计算分值的这个函数就开始由“直”变“曲”，拟合能力才有了本质提升</p>
+        <p>随着层数节点数的增多，拟合的能力就随之一步步上升。</p>
+        <p>如此一来，其实神经网络就可以理解为多个分类器的组合，而且是非线性的组合</p>
+        <p>也许这也正好说明了它强大的原因吧^_^</p>
+        <p></p>
+        <br>
+    </div>
+
+    <hr>
+
+    <div class='content-foot'>
+        <a href='#' id='sitemap'>Site Map</a>
+        <a href='./index.html' id='tohome'>Home</a>
+        <a href='./index.html#content-about' id='toabout'>About</a>
+        <a href='./index.html#content-ai' id='toai'>AI</a>
+        <a href='./index.html#content-web' id='toweb'>WEB</a>
+        <a href='../index.html' id='tohomeof515'>Homepage of Dorm515</a>
+        <a href='#' id='contact'>Contact</a>
+        <div class='towechatinfo'>
+            <a href='#?'><img src="./pics/wechat.png" alt="wechat" id='wechat'></a>
+            <div id='wechatinfo'>wxid:sgw_ite</div>
+        </div>
+        <div class='togithubinfo'>
+            <a href="#?"><img src="./pics/social-github.png" alt="github" id='github'></a>
+            <div id='githubinfo'>githubid:sgw-ite</div>
+        </div>        
+    </div>
+
+</body>
+</html>
